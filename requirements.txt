@@ -1,0 +1,10 @@
+langchain
+langchain-community
+langsmith
+chromadb
+tiktoken
+ollama
+pypdf
+streamlit
+python-dotenv
+watchdog
