@@ -1,0 +1,14 @@
+# Ignorar caché de Python
+__pycache__/
+*.py[cod]
+
+# Ignorar entorno virtual
+env/
+.venv/
+
+# Ignorar datos de ChromaDB
+chromadb/
+data/
+# Ignorar archivos específicos
+app2.py
+app3.py
