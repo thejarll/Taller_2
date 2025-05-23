@@ -86,7 +86,12 @@ if pregunta and len(modelos_seleccionados) > 0:
 
         contexto_base = documentos_legales + chunks_pdf_usuario
         contexto_filtrado = [doc for doc in contexto_base if len(doc.page_content.strip()) > 100]
-
+        # Mostrar contexto utilizado (opcional desplegable)
+        with st.expander("📚 Ver contexto legal utilizado"):
+            for i, doc in enumerate(contexto_filtrado, 1):
+                st.markdown(f"**Fragmento {i}:**")
+                st.write(doc.page_content.strip())
+                st.markdown("---")
     if len(modelos_seleccionados) == 1:
         modelo_clave = modelos_seleccionados[0]
         modelo_id = modelos_disponibles[modelo_clave]
